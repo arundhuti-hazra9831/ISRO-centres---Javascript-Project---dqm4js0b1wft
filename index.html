@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./Index.js" defer></script>
+    <title>Document</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 300px;
+        border: 1px solid #ddd;
+      }
 
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        width: 50px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+      tr:hover {
+        background-color: #f5f5f5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="search-wrapper" style="margin: auto">
+      <label for="search"></label>
+      <input type="search" id="search" data-search placeholder="Type here" />
+      <span>
+        <button data-center>Center</button>
+        <button data-city>City</button>
+        <button data-state>State</button>
+        <button data-reset>Reset</button>
+      </span>
+    </div>
+    <div class="user-cards" data-user-cards-container></div>
+    <template data-user-template>
+      <table class="card" style="margin: auto">
+        <tr>
+          <th>Center</th>
+          <th>City</th>
+          <th>State</th>
+        </tr>
+        <tr>
+          <td data-body></td>
+          <td data-subtitle></td>
+          <td data-header></td>
+        </tr>
+      </table>
+    </template>
+  </body>
+</html>
